@@ -1,262 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios | Multiservicios MM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Multiservicios MM</title>
+    <link rel="stylesheet" href="../CSS/style.css">
 
- 
-  <meta name="description" content="Descubre todos los servicios que ofrece Multiservicios MM: jardinería, limpieza, plomería, cerrajería, electricidad y más. Profesionales confiables a tu disposición.">
-  <meta name="keywords" content="servicios, mantenimiento, jardinería, plomería, cerrajería, limpieza, electricidad, Multiservicios MM, técnicos, reparaciones">
-  <meta name="author" content="Multiservicios MM">
-  <meta name="robots" content="index, follow">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+            animation: fadeInBody 1s ease-in;
+        }
 
-  <link rel="stylesheet" href="../CSS/style.css">
+        /* head */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #aa7d39;
+            animation: slideDown 1s ease-out;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9f9f9;
-      animation: fadeIn 1s ease-in;
-    }
+        header img {
+            transition: transform 0.4s ease;
+        }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #aa7d39;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-      animation: slideDown 1s ease-out;
-    }
+        header img:hover {
+            transform: scale(1.1) rotate(-2deg);
+        }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .company-NOMBRE {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(177, 24, 24);
+            margin-left: 10px;
+        }
 
-    .header-left img {
-      width: 90px;
-      transition: transform 0.4s ease;
-    }
+        header nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }  
 
-    .header-left img:hover {
-      transform: scale(1.1) rotate(-2deg);
-    }
+        header nav ul li a {
+            text-decoration: none;
+            color: rgb(197, 22, 22);
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
 
-    .company-name {
-      font-size: 26px;
-      font-weight: bold;
-      color: rgb(177, 24, 24);
-    }
+        header nav ul li a:hover {
+            color: #333;
+            transform: scale(1.1);
+        }
 
-    header nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+        /* partes */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
 
-    header nav ul li a {
-      text-decoration: none;
-      color: rgb(197, 22, 22);
-      font-weight: bold;
-      transition: color 0.3s, transform 0.3s;
-    }
+        section:nth-of-type(1) { animation-delay: 0.2s; }
+        section:nth-of-type(2) { animation-delay: 0.4s; }
+        section:nth-of-type(3) { animation-delay: 0.6s; }
 
-    header nav ul li a:hover {
-      color: #333;
-      transform: scale(1.1);
-    }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
 
-    h1 {
-      text-align: center;
-      color: rgb(197, 22, 22);
-      margin-top: 30px;
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
-    }
+        /* formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease 0.8s forwards;
+            opacity: 0;
+        }
 
-    p {
-      text-align: center;
-      max-width: 800px;
-      margin: 10px auto;
-      font-size: 18px;
-      color: #555;
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.3s;
-    }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
 
-    .servicios-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 40px 20px;
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.6s;
-    }
+        input[type="submit"] {
+            background-color: #aa7d39;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-    .servicio-card {
-      width: 250px;
-      background-color: #fff;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
-    }
+        input[type="submit"]:hover {
+            background-color: #8e662f;
+            transform: scale(1.05);
+        }
 
-    .servicio-card img {
-      width: 100%;
-      border-radius: 10px;
-      height: 150px;
-      object-fit: cover;
-    }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #aa7d39;
+            color: white;
+            margin-top: 30px;
+            animation: fadeIn 2s ease-in;
+        }
 
-    .servicio-card h3 {
-      color: rgb(177, 24, 24);
-      font-size: 20px;
-      margin: 10px 0;
-    }
+        .social-icons img {
+            width: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
 
-    .servicio-card p {
-      font-size: 16px;
-      color: #333;
-    }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
 
-    .servicio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
+        /* animacion */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #aa7d39;
-      color: white;
-      margin-top: 30px;
-      animation: fadeIn 2s ease-in;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      .servicios-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .servicio-card {
-        width: 90%;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-      }
-    }
-  </style>
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="header-left">
-      <img src="../medios/LOGO1.png" alt="Logo Multiservicios MM">
-      <span class="company-name">Multiservicios MM</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./servicios.html">Servicios</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-        <li><a href="./nosotros.html">Nosotros</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <!-- Logo + Nombre -->
+        <div style="display: flex; align-items: center;">
+            <img src="../medios/LOGO1.png" alt="LOGO1" width="100px">
+            <span class="company-NOMBRE">Multiservicios MM</span>
+        </div>
 
-  <main>
-    <h1>Nuestros servicios</h1>
-    <p>Elige entre nuestros profesionales calificados para cada área. Contamos con expertos en mantenimiento, reparación y limpieza para ofrecerte la mejor atención.</p>
+       
+        <nav>
+            <ul>
+                 <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./page/servicios.html">Servicios</a></li>
+        <li><a href="./page/contacto.html">Contacto</a></li>
+        <li><a href="./page/nosotros.html">Nosotros</a></li>
 
-    <section class="servicios-container">
-      <div class="servicio-card">
-        <img src="../medios/jardineria.png" alt="Jardinería">
-        <h3>Jardinería</h3>
-        <p>NP – Cuida tus espacios verdes con dedicación y experiencia de más de 20 años.</p>
-      </div>
+            </ul>
+        </nav>
+    </header>  
 
-      <div class="servicio-card">
-        <img src="../medios/plomeria.jpg" alt="Plomería">
-        <h3>Plomería</h3>
-        <p>Plomería FC – Reparaciones y mantenimiento con materiales de primera calidad.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/cerrajeria.jpg" alt="Cerrajería">
-        <h3>Cerrajería</h3>
-        <p>Cerraduras Yan – Apertura de puertas y duplicado de llaves seguras.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/limpieza 1.jpg" alt="Limpieza 2">
-        <h3>Limpieza</h3>
-        <p>Servicios LMO – Limpieza interior y exterior con la mejor calidad/precio.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/electrisista.jpg" alt="Electricista">
-        <h3>Electricidad</h3>
-        <p>Electricidad EL RAYO – Instalaciones y reparaciones eléctricas seguras.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/electricidad 2.jpg" alt="Electricidad 2">
-        <h3>Electricidad</h3>
-        <p>Electricidad – Arreglos de electrodomésticos y fallas en general.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/plomero 2.jpg" alt="Plomería 2">
-        <h3>Plomería</h3>
-        <p>Plomería CURCC – Reparaciones rápidas, servicio excelente y precios bajos.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../medios/jardineria 3.jpg" alt="Jardinería 3">
-        <h3>Jardinería</h3>
-        <p>El Pino – Podas y talas a gran o pequeña escala, más de 10 años de experiencia.</p>
-      </div>
+    <section class="join-message">
+        <h2>¿Por qué unirte a Multiservicios MM?</h2>
+        <p>
+            Contamos con la mayor red de servicios del país, donde cada trabajador se siente cómodo y valorado.  
+            Únete a nuestra comunidad para publicar tus servicios, aumentar tu visibilidad y conectar con miles de clientes que buscan profesionales como tú.  
+            ¡Forma parte del cambio y haz crecer tu negocio con nosotros!
+        </p>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Multiservicios MM. Todos los derechos reservados.</p>
-  </footer>
+    <section class="requirements">
+        <h2>Requisitos para unirse a Multiservicios MM</h2>
+        <p>Si deseas que tu empresa forme parte de nuestra red, asegúrate de cumplir con los siguientes requisitos antes de enviar tu solicitud:</p>
+        <ul>
+            <li><strong>Información general:</strong> Nombre legal y comercial, dirección, teléfono y correo electrónico de contacto.</li>
+            <li><strong>Representante responsable:</strong> Nombre completo, documento de identidad.</li>
+            <li><strong>Descripción de servicios:</strong> Carta de presentación, tipo de servicio ofrecido y zonas de cobertura.</li>
+            <li><strong>Documentación legal:</strong> Registro de empresa, certificados.</li>
+            <li><strong>Material visual:</strong> Logotipo, fotos o portafolio digital de trabajos.</li>
+            <li><strong>Compromisos:</strong> Mantener la información actualizada y ofrecer un servicio de calidad.</li>
+        </ul>
+    </section>
+
+    <main>
+        <h1>Contacto</h1>
+        <h2>Trabaja con nosotros</h2>
+        <p>
+            Aquí podrás dejar tu información o la de tu empresa para poder formar parte de nuestro extenso grupo de trabajo.
+        </p>
+       
+        <form action="">
+            <label for="">Carta de presentación</label>
+            <textarea name="" id="Carta de presentación"></textarea>
+
+            <label for="">Número de teléfono</label>
+            <input type="number" name="Numero de telefono" id="">
+
+            <label for="">Email</label>
+            <input type="email" name="Email" id="">
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/+59899091692628" target="_blank">
+                <img src="../medios/WSP.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:tuemail@gmail.com" target="_blank">
+                <img src="../medios/GM.png" alt="Gmail">
+            </a>
+            <a href="https://instagram.com/tucuenta" target="_blank">
+                <img src="../medios/ig.jpg" alt="Instagram">
+            </a>
+        </div>
+        <p>© 2025 Multiservicios MM. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
