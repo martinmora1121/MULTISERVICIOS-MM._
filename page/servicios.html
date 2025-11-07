@@ -19,21 +19,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+             padding: 10px 20px;
       background-color: #aa7d39;
       flex-wrap: wrap;
       animation: slideDown 1s ease-out;
     }
 
     .header-left {
-      display: flex;
+            display: flex;
       align-items: center;
       gap: 15px;
     }
 
     .company-name {
       font-size: 24px;
-      font-weight: bold;
+            font-weight: bold;
       color: rgb(177, 24, 24);
     }
 
@@ -46,17 +46,17 @@
     }
 
     header nav ul {
-      display: flex;
-      gap: 20px;
+        display: flex;
+         gap: 20px;
       list-style: none;
       margin: 0;
       padding: 0;
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     header nav ul li a {
       text-decoration: none;
-      color: rgb(197, 22, 22);
+        color: rgb(197, 22, 22);
       font-weight: bold;
       transition: color 0.3s, transform 0.3s;
     }
@@ -69,7 +69,7 @@
     /*texto */
     h1, h2 {
       text-align: center;
-      color: rgb(197, 22, 22);
+        color: rgb(197, 22, 22);
       margin-top: 20px;
       opacity: 0;
       animation: fadeInUp 1s ease forwards;
@@ -79,9 +79,9 @@
       text-align: center;
       max-width: 800px;
       margin: 0 auto;
-      font-size: 18px;
-      color: #555;
-      opacity: 0;
+        font-size: 18px;
+       color: #555;
+        opacity: 0;
       animation: fadeInUp 1s ease forwards;
       animation-delay: 0.3s;
     }
@@ -92,10 +92,10 @@
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
-      gap: 30px;
+        gap: 30px;
       padding: 40px 20px;
-      opacity: 0;
-      animation: fadeInUp 1s ease forwards;
+        opacity: 0;
+        animation: fadeInUp 1s ease forwards;
       animation-delay: 0.5s;
     }
 
@@ -103,9 +103,9 @@
       background-color: #f9f9f9;
       border: 2px solid #ccc;
       border-radius: 10px;
-      width: 250px;
-      text-align: center;
-      padding: 20px;
+        width: 250px;
+        text-align: center;
+        padding: 20px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
@@ -122,8 +122,8 @@
     .servicio-card:nth-child(5) { animation-delay: 1s; }
     .servicio-card:nth-child(6) { animation-delay: 1.1s; }
     .servicio-card:nth-child(7) { animation-delay: 1.2s; }
-    .servicio-card:nth-child(8) { animation-delay: 1.3s; }
-    .servicio-card:nth-child(9) { animation-delay: 1.4s; }
+       .servicio-card:nth-child(8) { animation-delay: 1.3s; }
+      .servicio-card:nth-child(9) { animation-delay: 1.4s; }
     .servicio-card:nth-child(10) { animation-delay: 1.5s; }
 
     .servicio-card:hover {
@@ -176,7 +176,7 @@
       }
     }
 
-    /* ===== ANIMACIONES ===== */
+    /*animacion*/
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -205,12 +205,13 @@
         <img src="../medios/LOGO1.png" alt="Logo Multiservicios MM" width="100px">
       <span class="company-name">Multiservicios MM</span>
     </div>
-    <nav>
-      <ul>
-          <li><a href="../index.html">Inicio</a></li>
-           <li><a href="./servicios.html">Servicios</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
+                <nav class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./page/servicios.html">Servicios</a></li>
+                      <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./page/contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./page/nosotros.html">Nosotros</a></li>
+               </ul>
     </nav>
   </header>
 
@@ -269,7 +270,7 @@
       </div>
 
       <div class="servicio-card">
-        <img src="../medios/plomero 2.jpg" alt="Plomería 2">
+                 <img src="../medios/plomero 2.jpg" alt="Plomería 2">
         <h3>Plomería</h3>
         <p>Plomería CURCC – Reparaciones rápidas, servicio excelente y precios bajos.</p>
       </div>
