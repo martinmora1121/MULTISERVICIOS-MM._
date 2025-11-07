@@ -7,6 +7,29 @@
   <link rel="stylesheet" href="CSS/style.css">
 
   <style>
+    /* ====== ANIMACIONES ====== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      animation: fadeIn 1s ease-in;
+    }
+
     /* ====== HEADER ====== */
     header {
       display: flex;
@@ -15,6 +38,7 @@
       background-color: #aa7d39;
       padding: 10px 20px;
       flex-wrap: wrap;
+      animation: slideDown 1s ease-out;
     }
 
     .header-left {
@@ -26,6 +50,11 @@
     .header-left img {
       width: 90px;
       height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .header-left img:hover {
+      transform: scale(1.1) rotate(-2deg);
     }
 
     .company-name {
@@ -46,11 +75,12 @@
       text-decoration: none;
       color: rgb(197, 22, 22);
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.3s;
     }
 
     header nav ul li a:hover {
       color: #333;
+      transform: scale(1.1);
     }
 
     /* ====== TITULOS ====== */
@@ -58,18 +88,29 @@
       text-align: center;
       color: rgb(197, 22, 22);
       margin-top: 20px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    h2 {
+      animation-delay: 0.3s;
     }
 
     /* ====== TEXTOS ====== */
     .intro-text, .highlight-text {
       text-align: center;
-      color: #e91e63;
+      color: #fff;
       font-size: 20px;
       line-height: 1.6;
       margin: 20px auto;
       max-width: 900px;
       font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
     }
+
+    .intro-text { animation-delay: 0.5s; }
+    .highlight-text { animation-delay: 0.8s; }
 
     /* ====== BANNER ====== */
     .work-banner {
@@ -79,12 +120,20 @@
       margin: 20px 0;
       overflow: hidden;
       border-radius: 10px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1s;
     }
 
     .work-banner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-banner:hover img {
+      transform: scale(1.05);
     }
 
     .banner-text {
@@ -94,12 +143,14 @@
       transform: translate(-50%, -50%);
       color: #fff;
       text-align: center;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.2s;
     }
 
     .banner-text h2 {
       font-size: 36px;
       font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
       margin-bottom: 15px;
     }
 
@@ -125,6 +176,10 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       justify-items: center;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.4s;
     }
 
     .service-box {
@@ -148,12 +203,14 @@
       background-color: #e2c79c;
     }
 
+    /* ====== FOOTER ====== */
     footer {
       text-align: center;
       padding: 10px;
       background-color: #aa7d39;
       color: #fff;
       margin-top: 20px;
+      animation: fadeIn 2s ease-in;
     }
 
     /* ====== RESPONSIVE ====== */
