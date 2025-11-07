@@ -12,8 +12,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-        padding: 10px 20px;
-        background-color: #aa7d39;
+      padding: 10px 20px;
+      background-color: #aa7d39;
       flex-wrap: wrap;
     }
 
@@ -25,64 +25,64 @@
 
     .company-name {
       font-size: 24px;
-       font-weight: bold;
-       color: rgb(177, 24, 24);
+      font-weight: bold;
+      color: rgb(177, 24, 24);
     }
 
     header nav ul {
-        display: flex;
+      display: flex;
       gap: 20px;
-         list-style: none;
-       margin: 0;
+      list-style: none;
+      margin: 0;
       padding: 0;
       flex-wrap: wrap;
     }
 
     header nav ul li a {
-        text-decoration: none;
+      text-decoration: none;
       color: rgb(197, 22, 22);
-        font-weight: bold;
+      font-weight: bold;
     }
 
     header nav ul li a:hover {
-        color: #333;
+      color: #333;
     }
 
-    /* ====== titulo====== */
+    /* ====== TITULOS ====== */
     h1, h2 {
       text-align: center;
       color: rgb(197, 22, 22);
-         margin-top: 20px;
+      margin-top: 20px;
     }
 
-    /* ====== Flex ====== */
+    /* ====== SERVICIOS FLEX ====== */
     .servicios-container {
       display: flex;
       justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
+      align-items: flex-start;
+      flex-wrap: wrap;
       gap: 30px;
       padding: 40px 20px;
     }
 
-         .servicio-card {
+    .servicio-card {
       background-color: #f9f9f9;
       border: 2px solid #ccc;
       border-radius: 10px;
       width: 250px;
-          text-align: center;
-         padding: 20px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
 
-            .servicio-card:hover {
+    .servicio-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     }
 
-           .servicio-card img {
+    .servicio-card img {
       width: 100%;
       height: 150px;
       object-fit: cover;
@@ -99,6 +99,14 @@
     .servicio-card p {
       font-size: 16px;
       color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #aa7d39;
+      color: white;
+      font-weight: bold;
     }
 
     /* ====== RESPONSIVE ====== */
@@ -118,91 +126,91 @@
 <body>
   <header>
     <div class="header-left">
-      <img src="../medios/LOGO1.png" alt="LOGO1" width="100px">
+      <img src="../imagenes/Logo.png" alt="Logo Multiservicios MM" width="100">
       <span class="company-name">Multiservicios MM</span>
     </div>
     <nav>
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./Servicios.html">Servicios</a></li>
-        <li><a href="./Contacto.html">Contacto</a></li>
-      
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <h1>Nuestros Servicios</h1>
-    <p style="text-align:center; max-width:800px; margin:0 auto; font-size:18px; color: #ccc;">
+    <p style="text-align:center; max-width:800px; margin:0 auto; font-size:18px; color:#333;">
       Elige entre nuestros profesionales calificados para cada área. Contamos con expertos en mantenimiento, reparación y limpieza para ofrecerte la mejor atención.
     </p>
 
     <section class="servicios-container">
-  <div class="servicio-card">
-    <img src="../medios/jardineria.png" alt="Jardinería">
-    <h3>Jardinería</h3>
-    <p>NP – Cuida tus espacios verdes con dedicación y experiencia de mas de 20 años en el rubro.</p>
-  </div>
 
-  <div class="servicio-card">
-    <img src="../medios/plomero 1.jpg" alt="Plomería">
-    <h3>Plomería</h3>
-    <p>Sainetin – Repara fugas, cañerías y sistemas sanitarios de forma rápida y segura.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/jardineria.png" alt="Jardinería">
+        <h3>Jardinería</h3>
+        <p>NP – Cuida tus espacios verdes con dedicación y más de 20 años de experiencia.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/limpieza (2).jpg" alt="Limpieza">
-    <h3>Limpieza</h3>
-    <p>CIO – Servicios de limpieza profesional para hogares y oficinas.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/plomero1.jpg" alt="Plomería">
+        <h3>Plomería</h3>
+        <p>Sainetin – Repara fugas, cañerías y sistemas sanitarios de forma rápida y segura.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/cerrajeria.jpg" alt="Cerrajería">
-    <h3>Cerrajería</h3>
-    <p>Cerraduras Yan – Apertura de puertas, duplicado de llaves y cerraduras seguras.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/limpieza2.jpg" alt="Limpieza">
+        <h3>Limpieza</h3>
+        <p>CIO – Servicios de limpieza profesional para hogares y oficinas.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/limpieza 1.jpg" alt="limpieza 2">
-    <h3>Limpieza</h3>
-    <p>Servicios LMO – Limpieza de interior y exterior,contamos con la mejor caliad/precio del mercado.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/cerrajeria.jpg" alt="Cerrajería">
+        <h3>Cerrajería</h3>
+        <p>Cerraduras Yan – Apertura de puertas, duplicado de llaves y cerraduras seguras.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/electrisista.jpg" alt="Electricidad">
-    <h3>Electricidad</h3>
-    <p>Electricidad EL RAYO – Instalaciones y reparaciones eléctricas confiables y seguras ya sea a grande o pequeña escala.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/limpieza1.jpg" alt="Limpieza adicional">
+        <h3>Limpieza</h3>
+        <p>Servicios LMO – Limpieza interior y exterior con la mejor calidad/precio del mercado.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/jardineria 2.jpg" alt="jardineria 2">
-    <h3>Jardineria</h3>
-    <p>Jorge Sanchez – Uso de herramientas profesionales para un trabajo impecable y en tiempo record.</p>
-  </div>
+      <div class="servicio-card">
+        <img src="../medios/electricidad1.jpg" alt="Electricidad">
+        <h3>Electricidad</h3>
+        <p>Electricidad EL RAYO – Instalaciones y reparaciones confiables y seguras.</p>
+      </div>
 
-  <div class="servicio-card">
-    <img src="../medios/electricidad 2.jpg" alt="Electricidad 2">
-    <h3>Electricidad</h3>
-    <p>Electricidad – Se hacen arreglos de electrodomésticos y fallas en general de manera rápida y confiable.</p>
-  </div>
-   
-  <div class="servicio-card">
-    <img src="../medios/plomero 2.jpg" alt="Plomería">
-    <h3>Plomería</h3>
-    <p>Plomeria CURCC – Reparaciones en tiempo record, ademas del mejor servicio y mejores precios.</p>
-  </div>
-   
-  <div class="servicio-card">
-    <img src="../medios/jardineria 3.jpg" alt="Plomería">
-    <h3>Jardinería</h3>
-    <p>El pino – Con mas de 10 años en el mercado realizamos podas y talas a nivel industrial y a pequeña escala.</p>
-  </div>
-</section>
+      <div class="servicio-card">
+        <img src="../medios/jardineria2.jpg" alt="Jardinería 2">
+        <h3>Jardinería</h3>
+        <p>Jorge Sánchez – Herramientas profesionales para un trabajo impecable y rápido.</p>
+      </div>
 
+      <div class="servicio-card">
+        <img src="../medios/electricidad2.jpg" alt="Electricidad 2">
+        <h3>Electricidad</h3>
+        <p>Electricidad – Arreglos de electrodomésticos y fallas en general de forma confiable.</p>
+      </div>
+
+      <div class="servicio-card">
+        <img src="../medios/plomero2.jpg" alt="Plomería 2">
+        <h3>Plomería</h3>
+        <p>Plomería CURCC – Reparaciones en tiempo récord, con los mejores precios.</p>
+      </div>
+
+      <div class="servicio-card">
+        <img src="../medios/jardineria3.jpg" alt="Jardinería 3">
+        <h3>Jardinería</h3>
+        <p>El Pino – Más de 10 años realizando podas y talas industriales y domésticas.</p>
+      </div>
+
+    </section>
   </main>
 
   <footer>
-    <p>SIGUIENTE PAGINA (1) </p>
+    © 2025 Multiservicios MM. Todos los derechos reservados.
   </footer>
 </body>
 </html>
