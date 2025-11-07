@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiservicios MM</title>
-    <link rel="stylesheet" href="../coder/CSS/style.css">
+    <!-- Ruta corregida al CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
     <style>
         /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-                 padding: 10px 20px;
-              background-color: #aa7d39;
+            padding: 10px 20px;
+            background-color: #aa7d39;
             flex-wrap: wrap;
         }
 
         .header-left {
             display: flex;
-               align-items: center;
+            align-items: center;
             gap: 15px;
         }
 
         .company-name {
             font-size: 24px;
             font-weight: bold;
-               color: rgb(177, 24, 24);
+            color: rgb(177, 24, 24);
         }
 
         header nav ul {
@@ -33,15 +35,15 @@
             gap: 20px;
             list-style: none;
             margin: 0;
-               padding: 0;
+            padding: 0;
             flex-wrap: wrap;
         }  
 
         header nav ul li a {
             text-decoration: none;
-             color: rgb(197, 22, 22);
-                font-weight: bold;
-           }
+            color: rgb(197, 22, 22);
+            font-weight: bold;
+        }
 
         header nav ul li a:hover {
             color: #333;
@@ -53,25 +55,25 @@
             color: rgb(197, 22, 22);
         }
 
-        /*  introducción */
+        /* Introducción */
         .intro-text, .highlight-text {
             text-align: center;
-              color: #e91e63; 
-               font-size: 20px;
-              font-weight: 500;
-              line-height: 1.6;
-               margin: 20px auto;
+            color: #e91e63; 
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 20px auto;
             max-width: 900px;
-              font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         }
 
-        /* Banner 1*/
+        /* Banner */
         .work-banner {
             position: relative;
             width: 100%;
             max-height: 400px;
             margin: 20px 0;
-              overflow: hidden;
+            overflow: hidden;
             border-radius: 10px;
         }
 
@@ -84,10 +86,11 @@
         .banner-text {
             position: absolute;
             top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-               color: #fff;
-            text-align: center;}
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
 
         .banner-text h2 {
             font-size: 36px;
@@ -100,9 +103,9 @@
             padding: 10px 20px;
             font-size: 18px;
             font-weight: bold;
-              color: #fff;
+            color: #fff;
             background-color: #e91e63;
-             border: none;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -112,40 +115,40 @@
             background-color: #c2185b;
         }
 
-                 /* servicios grid */
+        /* Servicios grid */
         .services-container {
             display: grid;
-             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
-              justify-items: center;
+            justify-items: center;
         }
 
-             .service-box {
+        .service-box {
             background-color: #f4f4f4;
             border: 2px solid #333;
             border-radius: 10px;
-              display: flex;
-              justify-content: center;
+            display: flex;
+            justify-content: center;
             align-items: center;
-                font-weight: bold;
+            font-weight: bold;
             font-size: 18px;
             cursor: pointer;
-              transition: transform 0.3s, background-color 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
             text-align: center;
             height: 150px;
             width: 100%;
         }
 
-            .service-box:hover {
+        .service-box:hover {
             transform: translateY(-5px);
             background-color: #e2c79c;
         }
 
-           section {
+        section {
             padding: 20px;
         }
 
-        /* cel */
+        /* Responsive */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -159,7 +162,7 @@
             }
 
             .services-container {
-                grid-template-columns: 1fr; /* celular*/
+                grid-template-columns: 1fr;
                 gap: 15px;
                 align-items: center;
             }
@@ -185,10 +188,12 @@
         }
     </style>
 </head>
+
 <body>
 <header>
   <div class="LOGO1">
-    <img src="imagenes/Logo="Logo Multiservicios MM">
+    <!-- Ruta y etiqueta del logo corregida -->
+    <img src="imagenes/Logo.png" alt="Logo Multiservicios MM">
   </div>
   <nav>
     <ul>
@@ -198,6 +203,7 @@
     </ul>
   </nav>
 </header>
+
 <main>
     <section>
         <h1>Servicios mejores puntuados</h1>
@@ -209,17 +215,16 @@
         </p>
     </section>
 
-    <!-- Banner jardin -->
+    <!-- Banner -->
     <section class="work-banner">
-        <img src="./medios/jardineria.png" alt="Persona trabajando en jardinería">
-
+        <img src="medios/jardineria.png" alt="Persona trabajando en jardinería">
         <div class="banner-text">
             <h2>¡Bienvenido a Multiservicios MM!</h2>
-            <button onclick="location.href='#'">Conoce nuestros servicios</button>
+            <button onclick="location.href='page/servicios.html'">Conoce nuestros servicios</button>
         </div>
     </section>
 
-    <!-- Sección de servicios con Grid -->
+    <!-- Servicios -->
     <section>
         <h1>Elije lo que necesitas</h1>
         <div class="services-container">
@@ -232,12 +237,11 @@
 
     <section>
         <h2>Opciones más usadas por los usuarios</h2>
-        
     </section>
-    
 </main>
 
 <footer>
+    <p style="text-align:center;">© 2025 Multiservicios MM. Todos los derechos reservados.</p>
 </footer>
 </body>
 </html>
