@@ -1,230 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Multiservicios MM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Multiservicios MM</title>
+    <link rel="stylesheet" href="../CSS/style.css">
 
-  <!-- Fuente moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+            animation: fadeInBody 1s ease-in;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #5e4322, #aa7d39);
-      color: #fff;
-    }
+        /* ==== HEADER ==== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #aa7d39;
+            animation: slideDown 1s ease-out;
+        }
 
-    /* ====== HEADER ====== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: rgba(170, 125, 57, 0.9);
-      backdrop-filter: blur(5px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        header img {
+            transition: transform 0.4s ease;
+        }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+        header img:hover {
+            transform: scale(1.1) rotate(-2deg);
+        }
 
-    .header-left img {
-      width: 80px;
-      border-radius: 10px;
-      animation: fadeIn 1s ease-in-out;
-    }
+        .company-NOMBRE {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(177, 24, 24);
+            margin-left: 10px;
+        }
 
-    .company-name {
-      font-size: 26px;
-      font-weight: bold;
-      color: #fff;
-      letter-spacing: 1px;
-    }
+        header nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }  
 
-    header nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+        header nav ul li a {
+            text-decoration: none;
+            color: rgb(197, 22, 22);
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
 
-    header nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+        header nav ul li a:hover {
+            color: #333;
+            transform: scale(1.1);
+        }
 
-    header nav ul li a:hover {
-      color: #ffe0b2;
-    }
+        /* ==== SECCIONES ==== */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
 
-    /* ====== MAIN CONTENT ====== */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      animation: fadeIn 1s ease-in-out;
-    }
+        section:nth-of-type(1) { animation-delay: 0.2s; }
+        section:nth-of-type(2) { animation-delay: 0.4s; }
+        section:nth-of-type(3) { animation-delay: 0.6s; }
 
-    h1, h2 {
-      text-align: center;
-      color: #fff;
-    }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
 
-    p, ul, li {
-      color: #f5f5f5;
-      line-height: 1.6;
-      font-size: 18px;
-    }
+        /* ==== FORMULARIO ==== */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease 0.8s forwards;
+            opacity: 0;
+        }
 
-    .join-message, .requirements, .about {
-      margin-bottom: 40px;
-      background-color: rgba(255, 255, 255, 0.08);
-      border-radius: 15px;
-      padding: 20px 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
 
-    .join-message:hover, .requirements:hover, .about:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
-    }
+        input[type="submit"] {
+            background-color: #aa7d39;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-    /* ====== FORMULARIO ====== */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      background-color: rgba(255,255,255,0.1);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
+        input[type="submit"]:hover {
+            background-color: #8e662f;
+            transform: scale(1.05);
+        }
 
-    label {
-      font-weight: bold;
-      color: #fff;
-    }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #aa7d39;
+            color: white;
+            margin-top: 30px;
+            animation: fadeIn 2s ease-in;
+        }
 
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      resize: none;
-      font-size: 16px;
-      background-color: rgba(255,255,255,0.8);
-      color: #333;
-    }
+        .social-icons img {
+            width: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
 
-    input[type="submit"] {
-      background-color: #e91e63;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
 
-    input[type="submit"]:hover {
-      background-color: #c2185b;
-      transform: scale(1.05);
-    }
+        /* ==== ANIMACIONES ==== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    /* ====== FOOTER ====== */
-    footer {
-      background-color: #3a2b14;
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-      margin-top: 50px;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-    .social-icons img {
-      width: 40px;
-      margin: 10px;
-      border-radius: 50%;
-      transition: transform 0.3s;
-    }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
 
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    /* ====== WHATSAPP FLOAT ====== */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      z-index: 1000;
-    }
-
-    .whatsapp-float img {
-      width: 100%;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-
-    .whatsapp-float img:hover {
-      transform: scale(1.1);
-    }
-
-    /* ====== ANIMACIONES ====== */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <!-- Logo + Nombre -->
+        <div style="display: flex; align-items: center;">
+            <img src="../medios/LOGO1.png" alt="LOGO1" width="100px">
+            <span class="company-NOMBRE">Multiservicios MM</span>
+        </div>
 
-  <header>
-    <div class="header-left">
-      <img src="../medios/LOGO1.png" alt="Logo Multiservicios MM">
-      <span class="company-name">Multiservicios MM</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./Servicios.html">Servicios</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+        <!-- Menú -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./Servicios.html">Servicios</a></li> 
+                <li><a href="./contacto.html">Contacto</a></li> 
+            </ul>
+        </nav>
+    </header>  
 
-  <main>
     <section class="join-message">
-      <h2>¿Por qué unirte a Multiservicios MM?</h2>
-      <p>
-        Contamos con la mayor red de servicios del país, donde cada trabajador se siente cómodo y valorado.  
-        Únete a nuestra comunidad para publicar tus servicios, aumentar tu visibilidad y conectar con miles de clientes que buscan profesionales como tú.  
-        ¡Forma parte del cambio y haz crecer tu negocio con nosotros!
-      </p>
+        <h2>¿Por qué unirte a Multiservicios MM?</h2>
+        <p>
+            Contamos con la mayor red de servicios del país, donde cada trabajador se siente cómodo y valorado.  
+            Únete a nuestra comunidad para publicar tus servicios, aumentar tu visibilidad y conectar con miles de clientes que buscan profesionales como tú.  
+            ¡Forma parte del cambio y haz crecer tu negocio con nosotros!
+        </p>
     </section>
 
     <section class="requirements">
-      <h2>Requisitos para unirse a Multiservicios MM</h2>
-      <p>
+        <h2>Requisitos para unirse a Multiservicios MM</h2>
+        <p>Si deseas que tu empresa forme parte de nuestra red, asegúrate de cumplir con los siguientes requisitos antes de enviar tu solicitud:</p>
+        <ul>
+            <li><strong>Información general:</strong> Nombre legal y comercial, dirección, teléfono y correo electrónico de contacto.</li>
+            <li><strong>Representante responsable:</strong> Nombre completo, documento de identidad.</li>
+            <li><strong>Descripción de servicios:</strong> Carta de presentación, tipo de servicio ofrecido y zonas de cobertura.</li>
+            <li><strong>Documentación legal:</strong> Registro de empresa, certificados.</li>
+            <li><strong>Material visual:</strong> Logotipo, fotos o portafolio digital de trabajos.</li>
+            <li><strong>Compromisos:</strong> Mantener la información actualizada y ofrecer un servicio de calidad.</li>
+        </ul>
+    </section>
+
+    <main>
+        <h1>Contacto</h1>
+        <h2>Trabaja con nosotros</h2>
+        <p>
+            Aquí podrás dejar tu información o la de tu empresa para poder formar parte de nuestro extenso grupo de trabajo.
+        </p>
+       
+        <form action="">
+            <label for="">Carta de presentación</label>
+            <textarea name="" id="Carta de presentación"></textarea>
+
+            <label for="">Número de teléfono</label>
+            <input type="number" name="Numero de telefono" id="">
+
+            <label for="">Email</label>
+            <input type="email" name="Email" id="">
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/+59899091692628" target="_blank">
+                <img src="../medios/WSP.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:tuemail@gmail.com" target="_blank">
+                <img src="../medios/GM.png" alt="Gmail">
+            </a>
+            <a href="https://instagram.com/tucuenta" target="_blank">
+                <img src="../medios/ig.jpg" alt="Instagram">
+            </a>
+        </div>
+        <p>© 2025 Multiservicios MM. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
