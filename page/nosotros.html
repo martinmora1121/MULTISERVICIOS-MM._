@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Nosotros | Multiservicios MM</title>
-<meta name="description" content="Conoce la historia de Multiservicios MM: una empresa uruguaya dedicada a conectar profesionales con clientes que buscan confianza, experiencia y calidad.">
-<meta name="keywords" content="nosotros, historia, empresa, Multiservicios MM, confianza, equipo, misión, visión, Uruguay">
-<meta name="author" content="Multiservicios MM">
-<meta name="robots" content="index, follow">
-
+  <title>Nosotros - Multiservicios MM</title>
   <link rel="stylesheet" href="../CSS/style.css">
 
   <style>
-    /* header*/
+/*  header */
     header {
       display: flex;
-        justify-content: space-between;
+      justify-content: space-between;
       align-items: center;
-                padding: 10px 20px;
+      padding: 10px 20px;
       background-color: #aa7d39;
       flex-wrap: wrap;
     }
@@ -28,28 +23,23 @@
       gap: 15px;
     }
 
-    .header-left img {
-      width: 100px;
-      height: auto;
-    }
-
     .company-name {
       font-size: 24px;
-         font-weight: bold;
+      font-weight: bold;
       color: rgb(177, 24, 24);
     }
 
     header nav ul {
       display: flex;
-        gap: 20px;
+      gap: 20px;
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     header nav ul li a {
-        text-decoration: none;
-        color: rgb(197, 22, 22);
+      text-decoration: none;
+      color: rgb(197, 22, 22);
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -58,7 +48,7 @@
       color: #333;
     }
 
-    /*conte */
+    /* conte  */
     h1, h2 {
       text-align: center;
       color: rgb(197, 22, 22);
@@ -66,28 +56,28 @@
     }
 
     .nosotros-container {
-       max-width: 1000px;
-        margin: 40px auto;
+      max-width: 1000px;
+      margin: 40px auto;
       padding: 30px 20px;
       text-align: center;
-         background-color: #f9f9f9;
+      background-color: #f9f9f9;
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       animation: fadeIn 1s ease-in;
     }
 
     .nosotros-container p {
-      color: #333;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 15px;
+        color: #333;
+        font-size: 18px;
+        line-height: 1.6;
+         margin-bottom: 15px;
     }
 
-    
+    /* timeline */
     .timeline {
       position: relative;
       max-width: 800px;
-          margin: 40px auto;
+      margin: 40px auto;
       padding-left: 20px;
       border-left: 4px solid #aa7d39;
       animation: fadeIn 1s ease-in-out;
@@ -104,14 +94,14 @@
 
     .timeline-item::before {
       content: "";
-          position: absolute;
+      position: absolute;
       left: -11px;
       top: 5px;
       width: 15px;
       height: 15px;
-       background-color: #aa7d39;
-        border-radius: 50%;
-      border: 2px solid white;
+          background-color: #aa7d39;
+         border-radius: 50%;
+         border: 2px solid white;
     }
 
     .timeline-item h3 {
@@ -123,14 +113,14 @@
     .timeline-item p {
       color: #f0f0f0;
       font-size: 16px;
-        line-height: 1.5;
+      line-height: 1.5;
     }
 
-    /* equipo */
+    /*  EQUIPO  */
     .team-section {
       display: flex;
       justify-content: center;
-         flex-wrap: wrap;
+      flex-wrap: wrap;
       gap: 30px;
       margin-top: 40px;
       animation: slideUp 1.2s ease-in-out;
@@ -168,7 +158,7 @@
       line-height: 1.4;
     }
 
-    /* animacion */
+    /* animacion  */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -184,7 +174,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* footer */
+   /* footer */
     footer {
       text-align: center;
       background-color: #aa7d39;
@@ -196,24 +186,19 @@
 </head>
 
 <body>
- <header class="navbar navbar-expand-lg bg-warning px-3">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold text-danger" href="#">
-      <img src="../medios/LOGO1.png" alt="Logo" width="80"> Multiservicios MM
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <nav class="collapse navbar-collapse" id="menuNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./servicios.html">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./contacto.html">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="./nosotros.html">Nosotros</a></li>
+  <header>
+    <div class="header-left">
+      <span class="company-name">Multiservicios MM</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./servicios.html">Servicios</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+             <li><a href="./nosotros.html">Nosotros</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
   <main>
     <section class="nosotros-container">
@@ -226,14 +211,14 @@
         A lo largo de los años, hemos construido una comunidad sólida de profesionales que comparten nuestros valores: responsabilidad, respeto y compromiso con la calidad.
       </p>
       <p>
-        Hoy, Multiservicios MM es sinónimo de confianza, rapidez y atención humana. Nuestro objetivo es que cada cliente se sienta acompañado desde el primer contacto hasta la finalización del servicio.
+                           Hoy, Multiservicios MM es sinónimo de confianza, rapidez y atención humana. Nuestro objetivo es que cada cliente se sienta acompañado desde el primer contacto hasta la finalización del servicio.
       </p>
     </section>
 
-   
+    /* linea */
     <section class="timeline">
       <div class="timeline-item">
-        <h3>2015 - Nace la idea</h3>
+                 <h3>2015 - Nace la idea</h3>
         <p>Un pequeño grupo de profesionales comenzó ofreciendo servicios de mantenimiento local en Montevideo.</p>
       </div>
       <div class="timeline-item">
@@ -248,19 +233,19 @@
         <h3>2024 - Comunidad nacional</h3>
         <p>Hoy contamos con una red de más de 300 profesionales y cientos de clientes satisfechos en todo el país.</p>
       </div>
-    </section>
+                    </section>
 
-    
+    /* team */
     <section class="team-section">
       <div class="team-card">
-        <h3>Martín Mora</h3>
-        <p>Fundador y Director General. <br> Comprometido con la excelencia y la atención personalizada.</p>
-      </div>
+          <h3>Martín Mora</h3>
+            <p>Fundador y Director General. <br> Comprometido con la excelencia y la atención personalizada.</p>
+            </div>
       <div class="team-card">
         <h3>Lucía Fernández</h3>
         <p>Gerente de Operaciones. <br> Supervisa la calidad del servicio y la experiencia del cliente.</p>
       </div>
-      <div class="team-card">
+                     <div class="team-card">
         <h3>Carlos Pérez</h3>
         <p>Coordinador de Comunicación. <br> Promueve la conexión entre profesionales y usuarios.</p>
       </div>
@@ -271,5 +256,6 @@
     <p>© 2025 Multiservicios MM. Todos los derechos reservados.</p>
   </footer>
 </body>
+</html>
 </html>
 
