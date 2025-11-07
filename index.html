@@ -1,248 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiservicios MM</title>
-    <!-- Ruta corregida al CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiservicios MM</title>
+  <link rel="stylesheet" href="CSS/style.css">
 
-    <style>
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #aa7d39;
-            flex-wrap: wrap;
-        }
+  <style>
+    /* ====== HEADER ====== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #aa7d39;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .company-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: rgb(177, 24, 24);
-        }
+    .header-left img {
+      width: 90px;
+      height: auto;
+    }
 
-        header nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }  
+    .company-name {
+      font-size: 26px;
+      font-weight: bold;
+      color: rgb(177, 24, 24);
+    }
 
-        header nav ul li a {
-            text-decoration: none;
-            color: rgb(197, 22, 22);
-            font-weight: bold;
-        }
+    header nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-        header nav ul li a:hover {
-            color: #333;
-        }
+    header nav ul li a {
+      text-decoration: none;
+      color: rgb(197, 22, 22);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        /* Encabezados */
-        h1, h2, h3, h4, h5, h6 {
-            text-align: center;
-            color: rgb(197, 22, 22);
-        }
+    header nav ul li a:hover {
+      color: #333;
+    }
 
-        /* Introducción */
-        .intro-text, .highlight-text {
-            text-align: center;
-            color: #e91e63; 
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.6;
-            margin: 20px auto;
-            max-width: 900px;
-            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-        }
+    /* ====== TITULOS ====== */
+    h1, h2 {
+      text-align: center;
+      color: rgb(197, 22, 22);
+      margin-top: 20px;
+    }
 
-        /* Banner */
-        .work-banner {
-            position: relative;
-            width: 100%;
-            max-height: 400px;
-            margin: 20px 0;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+    /* ====== TEXTOS ====== */
+    .intro-text, .highlight-text {
+      text-align: center;
+      color: #e91e63;
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 20px auto;
+      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
 
-        .work-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    /* ====== BANNER ====== */
+    .work-banner {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      margin: 20px 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            text-align: center;
-        }
+    .work-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .banner-text h2 {
-            font-size: 36px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-            margin-bottom: 15px;
-        }
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
 
-        .banner-text button {
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #e91e63;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    .banner-text h2 {
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-bottom: 15px;
+    }
 
-        .banner-text button:hover {
-            background-color: #c2185b;
-        }
+    .banner-text button {
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #e91e63;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        /* Servicios grid */
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            justify-items: center;
-        }
+    .banner-text button:hover {
+      background-color: #c2185b;
+    }
 
-        .service-box {
-            background-color: #f4f4f4;
-            border: 2px solid #333;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-            text-align: center;
-            height: 150px;
-            width: 100%;
-        }
+    /* ====== SERVICIOS ====== */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
 
-        .service-box:hover {
-            transform: translateY(-5px);
-            background-color: #e2c79c;
-        }
+    .service-box {
+      background-color: #f4f4f4;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      text-align: center;
+      height: 150px;
+      width: 100%;
+    }
 
-        section {
-            padding: 20px;
-        }
+    .service-box:hover {
+      transform: translateY(-5px);
+      background-color: #e2c79c;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #aa7d39;
+      color: #fff;
+      margin-top: 20px;
+    }
 
-            header nav ul {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-            .services-container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                align-items: center;
-            }
+      header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
 
-            .service-box {
-                height: 120px;
-                font-size: 16px;
-            }
+      .services-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        align-items: center;
+      }
 
-            .banner-text h2 {
-                font-size: 24px;
-            }
+      .service-box {
+        height: 120px;
+        font-size: 16px;
+      }
 
-            .banner-text button {
-                font-size: 16px;
-                padding: 8px 15px;
-            }
+      .banner-text h2 {
+        font-size: 24px;
+      }
 
-            .intro-text, .highlight-text {
-                font-size: 18px;
-                line-height: 1.5;
-            }
-        }
-    </style>
+      .banner-text button {
+        font-size: 16px;
+        padding: 8px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<header>
-  <div class="LOGO1">
-    <!-- Ruta y etiqueta del logo corregida -->
-    <img src="imagenes/Logo.png" alt="Logo Multiservicios MM">
-  </div>
- <nav>
-  <ul>
-    <li><a href="./index.html">Inicio</a></li>
-    <li><a href="./page/servicios.html">Servicios</a></li>
-    <li><a href="./page/contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+  <header>
+    <div class="header-left">
+      <img src="./medios/LOGO1.png" alt="Logo Multiservicios MM">
+      <span class="company-name">Multiservicios MM</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./page/servicios.html">Servicios</a></li>
+        <li><a href="./page/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-</header>
-
-<main>
+  <main>
     <section>
-        <h1>Servicios mejores puntuados</h1>
-        <p class="intro-text">
-            En base a la experiencia de los usuarios y algunas de sus recomendaciónes más repetidas podrás buscar el mejor proveedor de servicio para encontrar la mejor solución.
-        </p>
-        <p class="highlight-text">
-            En MM nos encargamos de poder solucionar tus problemas de manera fácil y sencilla, donde gracias a nuestros asociados te ofrecemos la mejor calidad de servicio y atención humana para que puedas notar la DIFERENCIA.
-        </p>
+      <h1>Servicios mejores puntuados</h1>
+      <p class="intro-text">
+        En base a la experiencia de los usuarios y sus recomendaciones podrás encontrar el mejor proveedor de servicios.
+      </p>
+      <p class="highlight-text">
+        En MM nos encargamos de resolver tus problemas de manera fácil y rápida, ofreciendo la mejor atención y calidad humana.
+      </p>
     </section>
 
     <!-- Banner -->
     <section class="work-banner">
-        <img src="medios/jardineria.png" alt="Persona trabajando en jardinería">
-        <div class="banner-text">
-            <h2>¡Bienvenido a Multiservicios MM!</h2>
-            <button onclick="location.href='page/servicios.html'">Conoce nuestros servicios</button>
-        </div>
+      <img src="./medios/jardineria.png" alt="Persona trabajando en jardinería">
+      <div class="banner-text">
+        <h2>¡Bienvenido a Multiservicios MM!</h2>
+        <button onclick="location.href='page/servicios.html'">Conoce nuestros servicios</button>
+      </div>
     </section>
 
     <!-- Servicios -->
     <section>
-        <h1>Elije lo que necesitas</h1>
-        <div class="services-container">
-            <div class="service-box">Limpieza</div>
-            <div class="service-box">Cerrajería</div>
-            <div class="service-box">Jardinería</div>
-            <div class="service-box">Plomería</div>
-        </div>
+      <h1>Elije lo que necesitas</h1>
+      <div class="services-container">
+        <div class="service-box">Limpieza</div>
+        <div class="service-box">Cerrajería</div>
+        <div class="service-box">Jardinería</div>
+        <div class="service-box">Plomería</div>
+      </div>
     </section>
 
     <section>
-        <h2>Opciones más usadas por los usuarios</h2>
+      <h2>Opciones más usadas por los usuarios</h2>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p style="text-align:center;">© 2025 Multiservicios MM. Todos los derechos reservados.</p>
-</footer>
+  <footer>
+    <p>© 2025 Multiservicios MM. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
