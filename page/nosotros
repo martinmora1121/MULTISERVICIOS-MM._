@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nosotros - Multiservicios MM</title>
+  <meta name="description" content="Conoce la historia, misión y el equipo detrás de Multiservicios MM. Servicios confiables y calidad humana." />
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <style>
+    /* Estilos propios para la página Nosotros (mantenemos la estética del sitio) */
+    :root {
+      --accent: #aa7d39;
+      --accent-dark: #8d672e;
+      --brand-red: rgb(177,24,24);
+      --muted: #666;
+      --card-bg: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      background: linear-gradient(180deg, #fbfaf8 0%, #f6f3f1 100%);
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: var(--accent);
+      color: white;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .header-left { display:flex; align-items:center; gap:12px; }
+    .header-left img { width: 76px; height: auto; border-radius:6px; }
+    .company-name { font-weight:700; font-size:20px; color:#fff; }
+
+    nav ul { display:flex; gap:16px; list-style:none; margin:0; padding:0; }
+    nav a { color: #fff; text-decoration:none; font-weight:600; }
+    nav a:hover { color: #fff; opacity:0.9; transform:translateY(-2px); }
+
+    main { max-width:1100px; margin:28px auto; padding:0 18px; }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(170,125,57,0.06), rgba(233,30,99,0.03));
+      border-radius:12px;
+      padding:22px;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      animation: fadeInUp .8s ease both;
+    }
+    .hero .text { flex:1; }
+    .hero h1 { margin:0 0 8px 0; color:var(--brand-red); }
+    .hero p { margin:0; color:var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius:10px;
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+
+    .timeline { list-style:none; padding:0; margin:0; }
+    .timeline li { padding:12px 0; border-bottom:1px solid #eee; }
+    .timeline li strong { display:block; color:var(--brand-red); }
+
+    .team { display:flex; gap:12px; flex-wrap:wrap; }
+    .member {
+      width: 140px;
+      text-align:center;
+    }
+    .member img {
+      width:100%;
+      height:100px;
+      object-fit:cover;
+      border-radius:8px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.06);
+    }
+    .member h4 { margin:8px 0 4px 0; font-size:15px; color:var(--brand-red); }
+    .member p { margin:0; font-size:13px; color:var(--muted); }
+
+    .mission, .vision { line-height:1.6; color:#333; }
+
+    footer { margin:40px 0; text-align:center; color:#fff; background:var(--accent); padding:12px 0; border-radius:8px; }
+
+    /* animacion */
+    @keyframes fadeInUp {
+      from { opacity:0; transform: translateY(20px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    /* responsive tweaks */
+    @media (max-width:520px) {
+      .hero { flex-direction:column; align-items:flex-start; }
+      .member { width:45%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="../medios/LOGO1.png" alt="Logo Multiservicios MM">
+      <div>
+        <div class="company-name">Multiservicios MM</div>
+        <div style="font-size:12px;color:#fff;opacity:0.9;">Soluciones rápidas y confiables</div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html" style="text-decoration:underline;">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- historia 1 -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="text">
+        <h1 id="hero-title">Nuestra historia</h1>
+        <p>
+          Multiservicios MM nació de una promesa: convertir la urgencia en solución. Fundada en 2015 por Martín Mora en un pequeño local, comenzó ofreciendo reparaciones y mantenimiento urgente a vecinos del barrio. Con dedicación y una red de técnicos confiables, la empresa creció y hoy conecta a más de 200 profesionales con clientes en toda la región.
+        </p>
+      </div>
+      <div style="max-width:220px;">
+        <img src="../medios/jardineria.png" alt="Equipo trabajando" style="width:100%; border-radius:8px;">
+      </div>
+    </section>
+
+    <!-- mision -->
+    <div class="grid" style="margin-top:20px;">
+      <article class="card">
+        <h3>Misión</h3>
+        <p class="mission">
+          Brindar soluciones de mantenimiento y servicios técnicos con rapidez, seguridad y trato humano, facilitando la vida de hogares y empresas mediante profesionales verificados y atención cercana.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Visión</h3>
+        <p class="vision">
+          Ser la plataforma de referencia en la región para servicios confiables, impulsando la profesionalización de oficios y creando oportunidades sostenibles para nuestros asociados.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Valores</h3>
+        <ul style="margin:8px 0 0 18px; color:#444;">
+          <li><strong>Confianza</strong> — Verificamos a nuestros proveedores y garantizamos trabajos responsables.</li>
+          <li><strong>Calidad</strong> — Nos comprometemos con estándares y revisiones de servicio.</li>
+          <li><strong>Transparencia</strong> — Precios claros y comunicación directa.</li>
+          <li><strong>Compromiso social</strong> — Capacitación y oportunidades para los trabajadores locales.</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- historia -->
+    <section style="margin-top:22px;">
+      <div class="card">
+        <h3>Linea de tiempo</h3>
+        <ul class="timeline">
+          <li><strong>2015</strong> — Fundación: primer equipo de 3 técnicos y primeras reparaciones en el barrio.</li>
+          <li><strong>2017</strong> — Expansión: apertura de coordinación regional y contratación de atención al cliente.</li>
+          <li><strong>2019</strong> — Plataforma: lanzamiento del portal para solicitar servicios y gestionar trabajos.</li>
+          <li><strong>2022</strong> — Red consolidada: +200 profesionales verificados y servicios para empresas.</li>
+          <li><strong>2025</strong> — Hoy: Multiservicios MM continúa creciendo centrado en la calidad y el trato humano.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- equipo de trabajop -->
+    <section style="margin-top:22px;">
+      <div class="card">
+        <h3>Conoce al equipo</h3>
+        <div class="team" aria-label="Equipo Multiservicios MM" style="margin-top:12px;">
+          <div class="member">
+            <img src="../medios/LOGO1.png" alt="Martín (fundador)">
+            <h4>Martín Mora</h4>
+            <p>Fundador & CEO</p>
+          </div>
+
+          <div class="member">
+            <img src="../medios/jardineria.png" alt="Responsable operaciones">
+            <h4>Lucía Fernández</h4>
+            <p>Responsable de operaciones</p>
+          </div>
+
+          <div class="member">
+            <img src="../medios/cerrajeria.jpg" alt="Jefe técnico">
+            <h4>Diego Ramos</h4>
+            <p>Jefe técnico</p>
+          </div>
+
+          <div class="member">
+            <img src="../medios/limpieza 1.jpg" alt="Coordinación de asociadas">
+            <h4>María López</h4>
+            <p>Coordinación de asociados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- atencion-->
+    <section style="margin-top:22px;">
+      <div class="card" style="display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <div>
+          <h3>¿Querés ser parte?</h3>
+          <p style="margin:6px 0 0 0; color:#444;">
+            Si sos profesional y querés ofrecer tus servicios con nosotros, envianos tu presentación en la sección de contacto. Valoramos la experiencia y la responsabilidad.
+          </p>
+        </div>
+        <div>
+          <a href="contacto.html" style="display:inline-block; padding:10px 16px; background:var(--accent); color:white; border-radius:8px; text-decoration:none; font-weight:700;">Contactanos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width:1100px; margin:0 auto; padding:12px 18px;">
+      <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;">
+        <div style="color:#fff; font-weight:600;">© 2025 Multiservicios MM</div>
+        <div style="color:#fff; opacity:0.9;">Contacto: contacto@multiserviciosmm.com — Tel: +598 9909 16926</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
