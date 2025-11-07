@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Multiservicios MM</title>
-
-
-  <meta name="description" content="Multiservicios MM ofrece servicios de limpieza, plomería, jardinería y cerrajería con atención personalizada y calidad garantizada.">
-  <meta name="keywords" content="multiservicios, mantenimiento, limpieza, plomería, electricidad, jardinería, cerrajería, servicios, Uruguay">
-  <meta name="author" content="Multiservicios MM">
-  <meta name="robots" content="index, follow">
-
+  <title>Multiservicios MM</title>
   <link rel="stylesheet" href="CSS/style.css">
 
   <style>
-    /* animación */
+    /* ====== ANIMACIONES ====== */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes slideDown {
       from { transform: translateY(-100%); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -35,7 +30,7 @@
       animation: fadeIn 1s ease-in;
     }
 
-    /* header */
+    /* ====== HEADER ====== */
     header {
       display: flex;
       justify-content: space-between;
@@ -88,7 +83,7 @@
       transform: scale(1.1);
     }
 
-    /* títulos */
+    /* ====== TITULOS ====== */
     h1, h2 {
       text-align: center;
       color: rgb(197, 22, 22);
@@ -97,9 +92,11 @@
       animation: fadeInUp 1s ease forwards;
     }
 
-    h2 { animation-delay: 0.3s; }
+    h2 {
+      animation-delay: 0.3s;
+    }
 
-    /* textos */
+    /* ====== TEXTOS ====== */
     .intro-text, .highlight-text {
       text-align: center;
       color: #fff;
@@ -115,7 +112,7 @@
     .intro-text { animation-delay: 0.5s; }
     .highlight-text { animation-delay: 0.8s; }
 
-    /* banner */
+    /* ====== BANNER ====== */
     .work-banner {
       position: relative;
       width: 100%;
@@ -173,7 +170,7 @@
       background-color: #c2185b;
     }
 
-    /* servicios */
+    /* ====== SERVICIOS ====== */
     .services-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -206,7 +203,7 @@
       background-color: #e2c79c;
     }
 
-    /* footer */
+    /* ====== FOOTER ====== */
     footer {
       text-align: center;
       padding: 10px;
@@ -216,29 +213,34 @@
       animation: fadeIn 2s ease-in;
     }
 
-    /* responsive */
+    /* ====== RESPONSIVE ====== */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
+
       header nav ul {
         flex-direction: column;
         gap: 10px;
         width: 100%;
       }
+
       .services-container {
         grid-template-columns: 1fr;
         gap: 15px;
         align-items: center;
       }
+
       .service-box {
         height: 120px;
         font-size: 16px;
       }
+
       .banner-text h2 {
         font-size: 24px;
       }
+
       .banner-text button {
         font-size: 16px;
         padding: 8px 15px;
@@ -250,15 +252,15 @@
 <body>
   <header>
     <div class="header-left">
-      <img src="./medios/LOGO1.png" alt="Logo Multiservicios MM">
+      <img src="medios/LOGO1.png" alt="Logo Multiservicios MM">
       <span class="company-name">Multiservicios MM</span>
     </div>
     <nav>
       <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./page/servicios.html">Servicios</a></li>
-        <li><a href="./page/contacto.html">Contacto</a></li>
-        <li><a href="./page/nosotros.html">Nosotros</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="page/servicios.html">Servicios</a></li>
+        <li><a href="page/contacto.html">Contacto</a></li>
+        <li><a href="page/nosotros.html">Nosotros</a></li>
       </ul>
     </nav>
   </header>
@@ -275,7 +277,7 @@
     </section>
 
     <section class="work-banner">
-      <img src="./medios/jardineria.png" alt="Persona trabajando en jardinería">
+      <img src="medios/jardineria.png" alt="Persona trabajando en jardinería">
       <div class="banner-text">
         <h2>¡Bienvenido a Multiservicios MM!</h2>
         <button onclick="location.href='page/servicios.html'">Conoce nuestros servicios</button>
