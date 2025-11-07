@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../CSS/style.css">
 
   <style>
+    /* ====== head ====== */
     header {
       display: flex;
       justify-content: space-between;
@@ -47,13 +48,13 @@
       color: #333;
     }
 
+    /* ====== contenido ====== */
     h1, h2 {
       text-align: center;
       color: rgb(197, 22, 22);
       margin-top: 20px;
     }
 
-    /* ====== CONTENIDO PRINCIPAL ====== */
     .nosotros-container {
       max-width: 1000px;
       margin: 40px auto;
@@ -72,7 +73,45 @@
       margin-bottom: 15px;
     }
 
-    /* ====== EQUIPO ====== */
+    /* ====== linea de tiempo ====== */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      padding-left: 20px;
+      border-left: 4px solid #aa7d39;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .timeline-item {
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      background-color: #aa7d39;
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      color: rgb(177, 24, 24);
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .timeline-item p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* ====== team 1 ====== */
     .team-section {
       display: flex;
       justify-content: center;
@@ -130,6 +169,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ====== footer ====== */
     footer {
       text-align: center;
       background-color: #aa7d39;
@@ -159,30 +199,50 @@
     <section class="nosotros-container">
       <h1>Sobre Nosotros</h1>
       <p>
-        En <strong>Multiservicios MM</strong> creemos que cada problema tiene una solución rápida y profesional. Desde nuestros inicios en 2015, trabajamos para conectar a las personas con expertos calificados en diferentes áreas del mantenimiento y los servicios domésticos.
+        En <strong>Multiservicios MM</strong> creemos que cada problema tiene una solución rápida y profesional. 
+        Desde nuestros inicios en 2015, trabajamos para conectar a las personas con expertos calificados en distintas áreas del mantenimiento y los servicios del hogar.
       </p>
       <p>
-        Con el paso de los años, nuestra red de profesionales ha crecido, al igual que la confianza de nuestros clientes. Nos enorgullece ofrecer atención personalizada, precios justos y un compromiso constante con la excelencia.
+        A lo largo de los años, hemos construido una comunidad sólida de profesionales que comparten nuestros valores: responsabilidad, respeto y compromiso con la calidad.
       </p>
       <p>
-        Nuestra misión es brindar soluciones eficientes, seguras y humanas, garantizando siempre la mejor experiencia tanto para quienes solicitan servicios como para quienes los ofrecen.
+        Hoy, Multiservicios MM es sinónimo de confianza, rapidez y atención humana. Nuestro objetivo es que cada cliente se sienta acompañado desde el primer contacto hasta la finalización del servicio.
       </p>
     </section>
 
+    <!-- linea de trempo -->
+    <section class="timeline">
+      <div class="timeline-item">
+        <h3>2015 - Nace la idea</h3>
+        <p>Un pequeño grupo de profesionales comenzó ofreciendo servicios de mantenimiento local en Montevideo.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2017 - Expansión regional</h3>
+        <p>El proyecto creció, incorporando especialistas en electricidad, plomería y jardinería.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2020 - Plataforma digital</h3>
+        <p>Lanzamos nuestro sitio web para conectar a clientes y trabajadores de forma más ágil y moderna.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2024 - Comunidad nacional</h3>
+        <p>Hoy contamos con una red de más de 300 profesionales y cientos de clientes satisfechos en todo el país.</p>
+      </div>
+    </section>
+
+    <!-- team -->
     <section class="team-section">
       <div class="team-card">
         <h3>Martín Mora</h3>
-        <p>Fundador y Director General.<br> Líder comprometido con la innovación y la calidad de servicio.</p>
+        <p>Fundador y Director General. <br> Comprometido con la excelencia y la atención personalizada.</p>
       </div>
-
       <div class="team-card">
         <h3>Lucía Fernández</h3>
-        <p>Gerente de Operaciones.<br> Supervisa la logística y la satisfacción del cliente en todo el país.</p>
+        <p>Gerente de Operaciones. <br> Supervisa la calidad del servicio y la experiencia del cliente.</p>
       </div>
-
       <div class="team-card">
         <h3>Carlos Pérez</h3>
-        <p>Coordinador de Comunicación.<br> Encargado de la imagen, redes y atención digital de la empresa.</p>
+        <p>Coordinador de Comunicación. <br> Promueve la conexión entre profesionales y usuarios.</p>
       </div>
     </section>
   </main>
@@ -192,5 +252,3 @@
   </footer>
 </body>
 </html>
-
-
